@@ -23,7 +23,7 @@ stopwords = set(list(nltk_stopwords) + list(text.ENGLISH_STOP_WORDS) + list(STOP
 
 # BoW Scoring #
 @Language.component("mfd_tokenizer")
-def tokenizer(doc):
+def mfd_tokenizer(doc):
     
     """Performs minimal preprocessing on textual document.
     Steps include tokenization, lower-casing, and 
