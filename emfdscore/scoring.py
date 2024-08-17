@@ -9,7 +9,7 @@ import warnings
 warnings.simplefilter(action='ignore', category=FutureWarning)
 import pandas as pd
 from collections import Counter
-from emfdscore.load_mfds import *
+from .load_mfds import *
 import progressbar
 
 try:
