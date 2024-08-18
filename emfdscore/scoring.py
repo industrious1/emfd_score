@@ -30,7 +30,9 @@ def mfd_tokenizer(doc):
     stopword/punctuation/whitespace removal. 
     Returns list of processed tokens"""
     
-    return [x.lower_ for x in doc if x.lower_ not in stopwords and not x.is_punct and not x.is_digit and not x.is_quote and not x.like_num and not x.is_space]
+    tokens =  [x.lower_ for x in doc if x.lower_ not in stopwords and not x.is_punct and not x.is_digit and not x.is_quote and not x.like_num and not x.is_space]
+    doc._.tokens = tokens  # 使用spacy的扩展属性将tokens附加到doc对象上
+    return doc
 
 @Language.component("score_emfd_all_sent")
 def score_emfd_all_sent(doc):
