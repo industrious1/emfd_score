@@ -5,6 +5,7 @@ from sklearn.feature_extraction import text
 import spacy
 from spacy.lang.en.stop_words import STOP_WORDS
 from spacy.language import Language
+from spacy.tokens import Doc
 import warnings
 warnings.simplefilter(action='ignore', category=FutureWarning)
 import pandas as pd
