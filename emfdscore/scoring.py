@@ -22,6 +22,10 @@ except:
 stopwords = set(list(nltk_stopwords) + list(text.ENGLISH_STOP_WORDS) + list(STOP_WORDS))
 
 # BoW Scoring #
+# 注册扩展属性 'tokens'
+if not Doc.has_extension("tokens"):
+    Doc.set_extension("tokens", default=None)
+
 @Language.component("mfd_tokenizer")
 def mfd_tokenizer(doc):
     
